@@ -16,7 +16,7 @@ def get_time_logic(timezone: str) -> str:
     except Exception as e:
         return f"Error: {str(e)}"
 
-@mcp.tool()
+@mcp.tool(annotations={"readOnlyHint": True})
 def get_time(timezone: str) -> str:
     """
     Get the current time in the specified timezone.
